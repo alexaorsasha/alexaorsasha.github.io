@@ -230,16 +230,6 @@ let quizData = [
     correct: "Interpreta Java ByteCode"
   },
   {
-    question: "Quale tag HTML viene utilizzato per collegare uno script JavaScript a una pagina HTML?",
-    options: [
-      "<include>",
-      "<script>",
-      "<js>",
-      "<link>"
-    ],
-    correct: "<script>"
-  },
-  {
     question: "Quali sono i tipi base in JavaScript?",
     options: [
       "number, string, boolean, object, null",
@@ -2004,7 +1994,7 @@ let quizData = [
     ],
     correct: "Servlet"
   },
-  [
+
     {
       question: "Qual è la funzione di @RequestParam in Spring?",
       options: [
@@ -2105,7 +2095,7 @@ let quizData = [
       ],
       correct: "@Entity"
     },
-    [
+
       {
         question: "Qual è la funzione dell'operatore logico in un predicato composito?",
         options: [
@@ -2287,8 +2277,8 @@ let quizData = [
         ],
         correct: "401 UNAUTHORIZED"
       }
-    ]
-  ]
+    
+
 ]
 
 
