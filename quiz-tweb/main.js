@@ -2343,15 +2343,21 @@ const checkAnswer = (e) => {
 
   const isCorrect = userAnswer === quizData[questionNumber].correct;
 
-  if (isCorrect) {
-    e.target.classList.add(correct);
-    triggerFlash(correctCounter, "flash-green");
-  } else {
+  // Mostra sempre la risposta corretta
+  allOptions.forEach(option => {
+    if (option.textContent === quizData[questionNumber].correct) {
+      option.classList.add("correct");
+    }
+  });
+
+  if (!isCorrect) {
     e.target.classList.add("incorrect");
     triggerFlash(incorrectCounter, "flash-red");
+  } else {
+    triggerFlash(correctCounter, "flash-green");
   }
 
-  updateScoreCounters(); // aggiorna i numeri
+  updateScoreCounters();
 };
 
 
@@ -2367,25 +2373,23 @@ const createQuestion = () => {
     option.classList.add("option");
     option.textContent = o;
 
-    // Se c'è una risposta salvata
     if (savedAnswer) {
-      option.classList.add("disabled"); // blocca click
+      option.classList.add("disabled");
 
-      if (o === savedAnswer) {
-        // Evidenzia la risposta data
-        if (savedAnswer === quizData[questionNumber].correct) {
-          option.classList.add(correct);
-        } else {
-          option.classList.add("incorrect");
-        }
+      if (o === quizData[questionNumber].correct) {
+        option.classList.add("correct");
+      } else if (o === savedAnswer) {
+        option.classList.add("incorrect");
       }
     } else {
-      // Se non è ancora stata risposta, permetti il click
       option.addEventListener("click", checkAnswer);
     }
 
     options.appendChild(option);
   });
+
+  prevBtn.disabled = questionNumber === 0;
+  nextBtn.disabled = questionNumber === MAX_QUESTIONS - 1;
 
   updateScoreCounters();
   generateQuestionNav();
@@ -2458,7 +2462,7 @@ const goToHome = () => {
   score = 0;
   quizContainer.style.display = "none";
   quizResult.style.display = "none";
-  startBtnContainer.style.display = "block";
+  startBtnContainer.style.display = "flex";
   resetLocalStorage();
   updateScoreCounters();
 };
@@ -2486,14 +2490,14 @@ const generateQuestionNav = () => {
   navContainer.innerHTML = "";
 
   for (let i = 0; i < MAX_QUESTIONS; i++) {
-    const btn = document.createElement("button");
+    const btn = document.createElement("div");
     btn.textContent = i + 1;
     btn.classList.add("nav-dot");
 
     const answer = localStorage.getItem(`userAnswer_${i}`);
     if (answer) {
       if (answer === quizData[i].correct) {
-        btn.classList.add(correct);
+        btn.classList.add("correct");
       } else {
         btn.classList.add("incorrect");
       }
