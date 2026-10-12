@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.677efdfc.css",
+    "main.js": "/static/js/main.979e8122.js",
+    "static/js/206.1a3c7b6b.chunk.js": "/static/js/206.1a3c7b6b.chunk.js",
+    "static/media/mock1.jpg": "/static/media/mock1.7df66213c9a818bc9814.jpg",
+    "static/media/user.jpg": "/static/media/user.7ace9652b364ad67bdff.jpg",
+    "static/media/lato-latin-400-normal.woff2": "/static/media/lato-latin-400-normal.be36596da218e1eec01c.woff2",
+    "static/media/lato-latin-700-normal.woff2": "/static/media/lato-latin-700-normal.8f28e0e1fdb195149f1c.woff2",
+    "static/media/courier-prime-latin-400-normal.woff2": "/static/media/courier-prime-latin-400-normal.d3ad9c49a4404a52e7b5.woff2",
+    "static/media/lato-latin-700-normal.woff": "/static/media/lato-latin-700-normal.1dccf99a7a009cd0c134.woff",
+    "static/media/lato-latin-400-normal.woff": "/static/media/lato-latin-400-normal.190b769c7be76a0f0dbf.woff",
+    "static/media/courier-prime-latin-400-normal.woff": "/static/media/courier-prime-latin-400-normal.c176746e6a4cc67c595e.woff",
+    "static/media/courier-prime-latin-ext-400-normal.woff2": "/static/media/courier-prime-latin-ext-400-normal.fd32858553203bd66be2.woff2",
+    "static/media/courier-prime-latin-ext-400-normal.woff": "/static/media/courier-prime-latin-ext-400-normal.cbbe1c159875b9e836dc.woff",
+    "static/media/lato-latin-ext-400-normal.woff2": "/static/media/lato-latin-ext-400-normal.7c938e0eb1bed0788b8e.woff2",
+    "static/media/lato-latin-ext-700-normal.woff2": "/static/media/lato-latin-ext-700-normal.ba3449a1077a0afbe690.woff2",
+    "static/media/lato-latin-ext-700-normal.woff": "/static/media/lato-latin-ext-700-normal.525385ff38db638e45f0.woff",
+    "static/media/lato-latin-ext-400-normal.woff": "/static/media/lato-latin-ext-400-normal.fb0aa12c0b659961ab32.woff",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.677efdfc.css",
+    "static/js/main.979e8122.js"
+  ]
+}
